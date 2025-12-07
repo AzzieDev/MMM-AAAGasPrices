@@ -1,24 +1,24 @@
 {
-  "name": "mmm-aaagasprices",
-  "version": "1.0.0",
-  "description": "MagicMirror module to display AAA gas prices for specific US counties.",
-  "main": "node_helper.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "magicmirror",
-    "smartmirror",
-    "gas",
-    "prices",
-    "aaa",
-    "module"
-  ],
-  "author": "AzzieDevelopment",
-  "license": "MIT",
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AzzieDev/MMM-AAAGasPrices.git"
-  }
+	"name": "mmm-aaagasprices",
+	"version": "1.0.0",
+	"description": "MagicMirror module to display AAA gas prices for specific US counties.",
+	"main": "node_helper.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"magicmirror",
+		"smartmirror",
+		"gas",
+		"prices",
+		"aaa",
+		"module"
+	],
+	"author": "AzzieDevelopment",
+	"license": "MIT",
+	"dependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AzzieDev/MMM-AAAGasPrices.git"
+	}
 }
