@@ -5,39 +5,46 @@ A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that retrieves
 <img width="551" height="208" alt="image" src="https://github.com/user-attachments/assets/1a10f633-f9ad-4183-8460-f09dca698b81" />
 
 ## Features
+
 * **Live Data:** Scrapes the latest average price from AAA's daily reports.
 * **Granular:** Supports specific county-level data (not just state averages).
 * **Customizable:** Toggle county names, change icons, and adjust refresh rates.
 
 ## Installation
 
-1.  Navigate to your MagicMirror `modules` directory:
+1. Navigate to your MagicMirror `modules` directory:
+
     ```bash
     cd ~/MagicMirror/modules
     ```
 
-2.  Clone this repository:
+2. Clone this repository:
+
     ```bash
     git clone https://github.com/AzzieDev/MMM-AAAGasPrices.git
     ```
 
-3.  Navigate into the new directory:
+3. Navigate into the new directory:
+
     ```bash
     cd MMM-AAAGasPrices
     ```
 
-4.  Install dependencies:
+4. Install dependencies:
+
     ```bash
     npm install
     ```
 
 ## Dependencies
+
 * [node-fetch](https://www.npmjs.com/package/node-fetch) (v2)
 
 ## Configuration
 
 Add the following to your `config/config.js` file:
 a
+
 ```javascript
 {
     module: "MMM-AAAGasPrices",
@@ -115,17 +122,18 @@ Each of the 50 US states are listed in the table below. DC is only tracked on th
 | Wyoming | 52 |
 
 ### Step 2: Find your County ID
-1.  Replace MAP_ID in this URL with the ID from the table above.
+
+1. Replace MAP_ID in this URL with the ID from the table above.
     `https://gasprices.aaa.com/index.php?premiumhtml5map_js_data=true&map_id=MAP_ID`
-3.  Open that URL in a new browser tab. It will display the raw data configuration with a JSON at the bottom.
-4.  Search (Ctrl+F) for your county name (e.g., "Harford").
-5.  You will find it inside an object key like `13`. The number `13` is your **County ID**.
+3. Open that URL in a new browser tab. It will display the raw data configuration with a JSON at the bottom.
+4. Search (Ctrl+F) for your county name (e.g., "Harford").
+5. You will find it inside an object key like `st13`. The number `13` is your **County ID**.
 
+## Future Plans (Not Implemented but you are welcome to PR)
 
-
-## Future Plans (Not Implemented but you are welcome to PR):
-* Retrieve state-wide average cost (will enable support for District of Columbia, which doesn't have the gas prices tracked for individual wards (though AAA may have used to as the map with ID 17 has each ward listed)
-* Retrieve state-level EV average cost from https://sheets.googleapis.com/v4/spreadsheets/1R5Km2MEFBMJoaptRSPbKhJSLCgMcyPEyITFSvAvUdHo/values/Sheet1!A:F?key=AIzaSyB6scf9i9c1kA7ZLvw4SAMLSFCvWhKc0Eo
+* Retrieve state-wide average cost (will enable support for District of Columbia, which doesn't have the gas prices tracked for individual wards (though AAA may have used to, as the map with ID 17 has each ward listed)
+* Retrieve state-level EV average cost from <https://sheets.googleapis.com/v4/spreadsheets/1R5Km2MEFBMJoaptRSPbKhJSLCgMcyPEyITFSvAvUdHo/values/Sheet1!A:F?key=AIzaSyB6scf9i9c1kA7ZLvw4SAMLSFCvWhKc0Eo>
 
 ## License
+
 MIT
