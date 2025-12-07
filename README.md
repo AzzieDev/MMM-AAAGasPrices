@@ -16,7 +16,7 @@ A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that retrieves
 
 2.  Clone this repository:
     ```bash
-    git clone [https://github.com/AzzieDev/MMM-AAAGasPrices.git](https://github.com/AzzieDev/MMM-AAAGasPrices.git)
+    git clone https://github.com/AzzieDev/MMM-AAAGasPrices.git
     ```
 
 3.  Navigate into the new directory:
