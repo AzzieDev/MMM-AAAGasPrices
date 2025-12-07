@@ -2,7 +2,7 @@
 
 A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that retrieves and displays current gas price averages for a specific US county using data from AAA.
 
-<img width="551" height="208" alt="image" src="https://github.com/user-attachments/assets/1a10f633-f9ad-4183-8460-f09dca698b81" />
+![image](https://github.com/user-attachments/assets/1a10f633-f9ad-4183-8460-f09dca698b81)
 
 ## Features
 
@@ -121,9 +121,9 @@ Each of the 50 US states are listed in the table below. DC is only tracked on th
 
 1. Replace MAP_ID in this URL with the ID from the table above.
     `https://gasprices.aaa.com/index.php?premiumhtml5map_js_data=true&map_id=MAP_ID`
-3. Open that URL in a new browser tab. It will display the raw data configuration with a JSON at the bottom.
-4. Search (Ctrl+F) for your county name (e.g., "Harford").
-5. You will find it inside an object key like `st13`. The number `13` is your **County ID**.
+2. Open that URL in a new browser tab. It will display the raw data configuration with a JSON at the bottom.
+3. Search (Ctrl+F) for your county name (e.g., "Harford").
+4. You will find it inside an object key like `st13`. The number `13` is your **County ID**.
 
 ## Future Plans (Not Implemented but you are welcome to PR)
 
