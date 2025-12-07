@@ -10,6 +10,12 @@ A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that retrieves
 * **Granular:** Supports specific county-level data (not just state averages).
 * **Customizable:** Toggle county names, change icons, and adjust refresh rates.
 
+## Requirements
+
+* **MagicMirror²** instance
+* **Node.js**: v18.0.0 or higher
+  * *Note: This module uses the native Fetch API available in Node 18+. No external dependencies or `npm install` are required.*
+  
 ## Installation
 
 1. Navigate to your MagicMirror `modules` directory:
@@ -29,10 +35,6 @@ A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that retrieves
     ```bash
     cd MMM-AAAGasPrices
     ```
-
-## Dependencies
-
-* [node-fetch](https://www.npmjs.com/package/node-fetch) (v2)
 
 ## Configuration
 
