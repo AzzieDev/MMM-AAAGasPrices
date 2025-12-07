@@ -16,9 +16,7 @@
   ],
   "author": "AzzieDevelopment",
   "license": "MIT",
-  "dependencies": {
-    "node-fetch": "^2.6.7"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AzzieDev/MMM-AAAGasPrices.git"
