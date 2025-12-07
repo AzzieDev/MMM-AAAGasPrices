@@ -30,12 +30,6 @@ A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that retrieves
     cd MMM-AAAGasPrices
     ```
 
-4. Install dependencies:
-
-    ```bash
-    npm install
-    ```
-
 ## Dependencies
 
 * [node-fetch](https://www.npmjs.com/package/node-fetch) (v2)
