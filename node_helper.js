@@ -6,7 +6,6 @@
  */
 
 const NodeHelper = require("node_helper");
-const fetch = require("node-fetch");
 
 module.exports = NodeHelper.create({
     start: function () {
@@ -25,7 +24,6 @@ module.exports = NodeHelper.create({
         const url = `https://gasprices.aaa.com/index.php?premiumhtml5map_js_data=true&map_id=${config.mapId}&ver=6.8.3`;
 
         try {
-            // FAKE A BROWSER: Add a User-Agent header so AAA doesn't block us
             const response = await fetch(url, {
                 headers: {
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -50,7 +48,9 @@ module.exports = NodeHelper.create({
                 const mapData = JSON.parse(match[1]);
 
                 // Construct the key (e.g., st13 for County ID 13)
-                const key = "st" + config.countyId;
+                // Ensure config.countyId exists to avoid "stundefined"
+                const countyId = config.countyId || ""; 
+                const key = "st" + countyId;
 
                 if (mapData[key]) {
                     const result = {
@@ -62,13 +62,13 @@ module.exports = NodeHelper.create({
                     console.log(`MMM-AAAGasPrices: Success! Found ${result.name}: $${result.price}`);
                     this.sendSocketNotification("GAS_PRICE_RESULT", result);
                 } else {
-                    console.error(`MMM-AAAGasPrices: County ID ${config.countyId} not found in map data.`);
+                    console.error(`MMM-AAAGasPrices: County ID "${countyId}" (Key: ${key}) not found in map data.`);
                     // Send null to indicate error
                     this.sendSocketNotification("GAS_PRICE_RESULT", null);
                 }
             } else {
                 console.error("MMM-AAAGasPrices: Regex failed. The data format might have changed.");
-                console.error("First 100 chars received: " + rawText.substring(0, 100));
+                console.error("DEBUG snippet: " + rawText.substring(0, 150));
             }
 
         } catch (error) {
