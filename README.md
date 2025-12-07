@@ -2,6 +2,8 @@
 
 A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that retrieves and displays current gas price averages for a specific US county using data from AAA.
 
+<img width="551" height="208" alt="image" src="https://github.com/user-attachments/assets/1a10f633-f9ad-4183-8460-f09dca698b81" />
+
 ## Features
 * **Live Data:** Scrapes the latest average price from AAA's daily reports.
 * **Granular:** Supports specific county-level data (not just state averages).
